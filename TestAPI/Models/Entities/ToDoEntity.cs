@@ -8,6 +8,7 @@ namespace TestAPI.Models.Entities
     public class ToDoEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Title { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;

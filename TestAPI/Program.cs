@@ -11,10 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => // Update this line to configure Swagger
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestAPI", Version = "v1" });
-});
+builder.Services.AddSwaggerGen();
+
 
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
